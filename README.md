@@ -32,7 +32,10 @@ docker compose up --build
 3. Abrir la aplicación en el navegador
 http://localhost:3000/index.html
 
-Credenciales de Acceso de Prueba: El sistema cuenta con una base de datos SQLite integrada. Para probar la maqueta, el evaluador puede registrar un usuario nuevo directamente desde el botón de creación en la interfaz visual (los datos se persistirán automáticamente), o utilizar la siguiente cuenta corporativa preconfigurada: 
+Credenciales de Acceso de Prueba: El sistema cuenta con una base de datos SQLite integrada.
+Para probar la maqueta, el evaluador puede registrar un usuario nuevo directamente
+desde el botón de creación en la interfaz visual
+(los datos se persistirán automáticamente), o utilizar la siguiente cuenta corporativa preconfigurada: 
 
 * Usuario: diego@empresa.com 
 * Clave: 12345678
