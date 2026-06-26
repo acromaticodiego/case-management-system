@@ -23,7 +23,7 @@ Sigue estos 3 pasos en tu terminal para poner en marcha el proyecto:
 ### 1. Clonar el repositorio
 Descarga el proyecto en tu máquina local y entra a la carpeta:
 ```bash
-git clone [https://github.com/acromaticodiego/case-management-system.git](https://github.com/acromaticodiego/case-management-system.git)
+git clone https://github.com/acromaticodiego/case-management-system
 cd case-management-system
 
 2. Construir y encender el entorno (Docker)
