@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Monitoreo - Vista de Casos</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-logo">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>GeoGestion<strong>Casos</strong></span>
+        </div>
+        
+        <div class="user-profile">
+            <div class="user-avatar-wrapper">
+                <div class="user-avatar">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <span class="status-indicator online"></span>
+            </div>
+            
+            <div class="user-info">
+                <span class="user-role">Operador Activo</span>
+                <span class="user-name"><strong>Admin_01</strong></span>
+            </div>
+
+            <div class="nav-divider"></div>
+
+            <a href="index.html" class="btn-logout" title="Cerrar Sesión">
+                <i class="fa-solid fa-power-off"></i>
+            </a>
+        </div>
+    </header>
+
+    <main class="split-view">
+        
+        <section class="map-section">
+            <div id="map"></div>
+            <div class="map-overlay-hint">
+                <i class="fa-solid fa-mouse-pointer"></i> Haz clic en un marcador del mapa para cargar los detalles del caso
+            </div>
+        </section>
+
+        <section class="info-panel" id="infoPanel">
+            
+            <div class="panel-placeholder" id="panelPlaceholder">
+                <i class="fa-solid fa-folder-open placeholder-icon"></i>
+                <h3>Ningún caso seleccionado</h3>
+                <p>Por favor, seleccione una ubicación del mapa en el panel izquierdo para desplegar toda la información relevante.</p>
+            </div>
+
+            <div class="panel-content hidden" id="panelRealContent">
+                <div class="panel-header">
+                    <span class="case-tag" id="caseTag">Urgente</span>
+                    <h2 id="caseName">Caso #1024 - Incidencia de Red</h2>
+                    <p class="case-date"><i class="fa-regular fa-calendar"></i> <span id="caseDate">25 de Junio, 2026</span></p>
+                </div>
+
+                <div class="panel-body">
+                    <div class="info-section">
+                        <h4>Descripción</h4>
+                        <p id="caseDescription">Fallo detectado en el nodo principal de distribución de fibra. El sector reporta pérdida de paquetes severa afectando a clientes corporativos.</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h4>Evidencias Fotográficas</h4>
+                        <div class="image-gallery">
+                            <div class="image-box">
+                                <i class="fa-regular fa-image"></i>
+                                <span>Vista_Gral_Nodo.png</span>
+                            </div>
+                            <div class="image-box">
+                                <i class="fa-regular fa-image"></i>
+                                <span>Captura_Servidor.jpg</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-section">
+                        <h4>Otros detalles relevantes</h4>
+                        <table class="details-table">
+                            <tr>
+                                <td><i class="fa-solid fa-user-gear"></i> Asignado a:</td>
+                                <td id="caseAssignee">Soporte Técnico Nivel 2</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-location-crosshairs"></i> Coordenadas:</td>
+                                <td id="caseCoords">4.6097, -74.0817</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-spinner"></i> Estado Actual:</td>
+                                <td><span class="status-badge" id="caseStatus">En Proceso</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="panel-footer">
+                    <button class="btn-action"><i class="fa-solid fa-pen-to-square"></i> Gestionar Caso</button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

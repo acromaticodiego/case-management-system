@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Casos - Registro de Acceso</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Pequeño truco CSS para confundir más al navegador si lee el texto */
+        .nocapturar { unicode-bidi: bidi-override; direction: ltr; }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Solicitar acceso</h2>
+        <p class="subtitle">Crea tu cuenta para ingresar al sistema de monitoreo.</p>
+
+        <form class="login-form" autocomplete="off" action="javascript:void(0);">
+            
+            <div class="input-group">
+                <label for="fullname">Nombre completo</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-address-card input-icon"></i>
+                    <input type="text" id="fullname" placeholder="Ej. Juan Pérez" autocomplete="chrome-off" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Correo electrónico corporativo</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-envelope input-icon"></i>
+                    <input type="email" id="email" placeholder="tu@empresa.com" autocomplete="chrome-off" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="p1" class="nocapturar">Clave de acceso</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock input-icon"></i>
+                    <input type="password" id="p1" placeholder="Míni‌mo 8 carac‌teres" autocomplete="new-password" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="p2" class="nocapturar">Confirmar clave de acceso</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-shield-heart input-icon"></i>
+                    <input type="password" id="p2" placeholder="Repi‌te la cla‌ve" autocomplete="new-password" required>
+                </div>
+            </div>
+
+            <div class="remember-me">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">Acepto los términos de uso y políticas de privacidad</label>
+            </div>
+
+            <button type="submit" class="btn-primary">Enviar Solicitud</button>
+        </form>
+
+        <div class="divider">
+            <span>¿Ya tienes una cuenta acreditada?</span>
+        </div>
+
+        <p class="register-text">
+            <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Volver a iniciar sesión</a>
+        </p>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>
