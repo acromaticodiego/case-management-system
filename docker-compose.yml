@@ -1,18 +1,18 @@
 version: '3.8'
 
 services:
-  # Microservicio del Backend (FastAPI + SQLite)
+  
   backend:
     build: ./backend
     ports:
       - "8000:8000"
     volumes:
-      # Sincroniza la carpeta sqlite3 para que tu archivo app_database.db persista en tu equipo real
+     
       - ./backend/sqlite3:/app/sqlite3
     environment:
       - PYTHONUNBUFFERED=1
 
-  # Servidor del Frontend (HTML/JS/CSS)
+  
   frontend:
     build: ./frontend
     ports:
